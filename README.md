@@ -1,27 +1,53 @@
-# ShiftsManager
+# Easy Doc — Web
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
+Front-end do **Easy Doc**, plataforma que conecta **médicos** e **hospitais**: hospitais publicam plantões e médicos encontram e aceitam propostas de acordo com a sua especialidade.
 
-## Development server
+Projeto de Extensão da disciplina *Programação Orientada a Objetos em Java* (2023.2) — Universidade Estácio de Sá.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+> O back-end está em [easy-doc-api](https://github.com/gabrielfins/easy-doc-api).
 
-## Code scaffolding
+## Funcionalidades
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Cadastro e login separados para **médicos** e **hospitais**
+- Hospitais criam propostas de plantão (data e hora de início)
+- Médicos consultam as propostas disponíveis
+- Dashboard e calendário para cada perfil
 
-## Build
+## Tecnologias
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Angular
+- TypeScript
+- SCSS
+- RxJS
 
-## Running unit tests
+## Estrutura
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+src/app/
+├── components/        # Componentes reutilizáveis (button, ...)
+├── pages/
+│   ├── doctor/        # login, cadastro, dashboard e calendário do médico
+│   └── hospital/      # login, cadastro, dashboard, calendário e criação de plantão
+└── app.routes.ts      # Rotas
+```
 
-## Running end-to-end tests
+## Como executar
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Pré-requisitos: Node.js e npm, e a [API](https://github.com/gabrielfins/easy-doc-api) rodando.
 
-## Further help
+```bash
+npm install
+npm start
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Acesse `http://localhost:4200`.
+
+A URL da API é definida em `src/environments/environment.development.ts` (por padrão `http://localhost:8000/api`).
+
+## Scripts
+
+| Comando | Descrição |
+| --- | --- |
+| `npm start` | Servidor de desenvolvimento (`ng serve`) |
+| `npm run build` | Build de produção em `dist/` |
+| `npm test` | Testes unitários (Karma) |
