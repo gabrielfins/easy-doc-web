@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "shifts-manager": {
+    "easy-doc-web": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -18,7 +18,7 @@
           "builder": "@angular/build:application",
           "options": {
             "outputPath": {
-              "base": "dist/shifts-manager"
+              "base": "dist/easy-doc-web"
             },
             "index": "src/index.html",
             "polyfills": [
@@ -72,10 +72,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "shifts-manager:build:production"
+              "buildTarget": "easy-doc-web:build:production"
             },
             "development": {
-              "buildTarget": "shifts-manager:build:development"
+              "buildTarget": "easy-doc-web:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular/build:extract-i18n",
           "options": {
-            "buildTarget": "shifts-manager:build"
+            "buildTarget": "easy-doc-web:build"
           }
         },
         "test": {
